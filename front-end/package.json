@@ -1,0 +1,30 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass scss/main.scss dist/css/main.comp.css -w -r",
+    "compile" : " node-sass scss/main.scss dist/css/main.comp.css",
+    "prefix" : "postcss --u autoprefixer -b \" last 10 versions\" dist/css/main.comp.css --no-map -o dist/css/main.css",
+    "compress" : "node-sass dist/css/main.css dist/css/main.miin.css --output-style compressed",
+    "build" : "npm-run-all compile prefix compress"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^6.1.3"
+  }
+}
