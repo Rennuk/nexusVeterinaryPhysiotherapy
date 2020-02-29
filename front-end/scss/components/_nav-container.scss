@@ -1,0 +1,108 @@
+.nav-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: black;
+
+    .nav-main,
+    .nav-admin {
+        text-align: center;
+
+        a {
+            color: white;
+            font-weight: 600;
+        }
+    }
+
+    .nav-admin {
+        &__my-account-word {
+            display: block;
+        }
+
+        &__my-account-icon {
+            display: none;
+        }
+    }
+}
+
+.basket {
+    padding: 0;
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+
+
+/*** Media above 992 **********************************************
+********************************************************************/
+
+@include respond-above(992) {  
+    
+    .nav-container {
+        margin-left: 1.5625rem;
+        display: flex;
+        position: static;
+        flex: 1;
+        background: none;
+
+        .nav-main,
+        .nav-admin {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: black;
+            }
+        }
+
+        ul {
+            display: flex;
+            margin: 0;
+        }
+
+        .nav-admin {
+            margin-left: auto;
+
+            ul {
+                display: flex;
+                align-items: center;
+            }
+
+            &__my-account-word {
+                display: none;
+            }
+
+            &__my-account-icon {
+                display: block;
+            }
+
+
+            &__user-icon {
+                background: #d3d3d3;
+                width: 58px;
+                height: 58px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50px;
+
+            }
+        }
+    }
+
+    .nav-main{
+        li:not(:last-child){
+            padding-right: 1.5rem;
+        }
+    }
+
+    .nav-admin{
+        li{
+            margin-right: 1.5rem;
+        }
+    }
+}

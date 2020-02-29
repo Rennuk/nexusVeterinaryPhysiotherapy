@@ -7,7 +7,7 @@
     "watch": "node-sass scss/main.scss dist/css/main.comp.css -w -r",
     "compile" : " node-sass scss/main.scss dist/css/main.comp.css",
     "prefix" : "postcss --u autoprefixer -b \" last 10 versions\" dist/css/main.comp.css --no-map -o dist/css/main.css",
-    "compress" : "node-sass dist/css/main.css dist/css/main.miin.css --output-style compressed",
+    "compress" : "node-sass dist/css/main.css ../public/css/main.min.css --output-style compressed",
     "build" : "npm-run-all compile prefix compress"
   },
   "browserslist": [

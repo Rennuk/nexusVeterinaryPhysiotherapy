@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    padding: 10px 1.5625rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*** Media above 768 **********************************************
+********************************************************************/
+
+@include respond-above(sm) {
+    header{
+        padding: 1.25rem 2.5rem;
+    }
+}

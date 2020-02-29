@@ -1,0 +1,56 @@
+/*** Open button **************************************************
+*******************************************************************/
+.open-mobile-nav{
+    height: 23px;
+
+    &__icon{
+        span{
+            background: black;
+            height: 3px;
+            width: 22px;
+            display: block;
+            position: relative;
+            top: 10px;
+
+            &::before{
+                content: '';
+                background: black;
+                top: -10px;
+                display: block;
+                width: 24px;
+                height: 3px;
+                position: relative;
+            }
+
+            &::after{
+                content: '';
+                background: black;
+                bottom: -7px;
+                display: block;
+                width: 20px;
+                height: 3px;
+                margin-top: 7px;
+            }
+        }
+    }
+}
+
+
+/*** Close button *************************************************
+********************************************************************/
+.close-mobile-nav {
+    color: white;
+}
+
+
+/*** Media above 991 **********************************************
+********************************************************************/
+
+@include respond-above(992) {
+    
+    .open-mobile-nav,
+    .close-mobile-nav {
+        display: none;
+    }
+
+}
